@@ -5,6 +5,7 @@ body {
 }
 .num1 {
     text-align: center;
+    background-color: rgb(172, 171, 171);
 }
 
 h1 {
@@ -25,6 +26,13 @@ a:hover {
     background-color: orange;
     color:#fff;
     text-decoration: line-through;
+}
+
+.op {
+    color : rgb(2, 71, 54);
+    font-size: 22px;
+    text-align: center;
+    text-decoration: underline;
 }
 
 h2 {
