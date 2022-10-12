@@ -1,0 +1,76 @@
+@charset "utf-8";
+body {
+    font font-family: '나눔고딕', '맑은 고딕', 돋움, sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #222;
+
+    /*********메인*********/
+    main {}
+    main > h1 {
+        background-color: #000
+        color:#fff;
+        text-align:center;
+        font-size:32px;
+
+    }
+    main > section {
+        text-align: center;
+    }
+    main > section > h3 {
+        font-weight: normal;
+        text-decoration: underline;
+        font-size:16px;
+        color:brown;
+
+    }
+    main > section > .deco-color {
+        color:red;
+        font-size:16px;
+    }
+    main > section > a {
+        color:white;
+        background-color: hotpink;
+        font-weight: bold;
+        font: size 26px;
+        text-decoration: none;
+    }
+
+    main > section > a:hover {
+        text-decoration: line-through;
+        background-color: #425f57;
+    }
+
+    /* container */
+    main > .containr {}
+    main > .containr > h2 {
+
+    }
+    main > .containr > h2 {
+        text-align: center;
+        text-decoration: underline;
+        color:#425f57;
+    }
+    
+    main > .containr > section > h3 {
+        background-color: orange;
+        text-align: right;
+    }
+    main > .containr > section > ul > .deco-bg {
+        background-color: palevioletred;
+    }
+    /*main > .container > section > ol > li > .deco-color
+    color : red;*/
+
+    main .deco-color { /*하위 선택자 : 띄어쓰기로 작성. 기준 요소의 하위(자식, 자손)에 있는 선택자
+        main안에 .deco-color가 포함되기만 하면 적용*/
+        color:red;
+    }
+    main.deco-color {
+        background-color lightskyblue;
+        /*종속선택자 : 띄어쓰기 없이 작성. main요소가 가진 클래스명 중에 .deco-color 이름을 가진 요소 탐색
+        */
+    }
+    }
+
+
