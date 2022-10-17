@@ -1,0 +1,10 @@
+@charset "utf-8"; /*이거 css 파일에 진짜 필수임 왕짱필수*/
+
+body {
+    background-color: #3C2317;}
+
+h1 {background-color: orange;}
+#title1{color:azure;}
+#title2{color: beige;}
+#title3{color:black;}
+#title4{color: blue;}

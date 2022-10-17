@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>fontEX3</title>
+    <style>
+        #form1 {
+            background-color: orange;
+            color:purple;
+            font-size: 25px;
+            font-weight: bold;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            cursor: pointer;
+        }
+        /*서체 관련 특성은 폼 관련 요소에 직접 적용*/
+        form>fieldset>button{
+            color:red;
+            font-size: 20px;
+            background-color: #000;
+            cursor: pointer;
+        }
+        
+        form>fieldset>input {
+            font-family:'나눔고딕', Geneva, Tahoma, sans-serif;
+            font-size: 20px;
+            background-color: skyblue;
+            color: white;
+        }
+        
+        #form2 {
+            background-color: orange;
+            color:purple;
+            font-size: 25px;
+            font-weight: bold;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        #field2 {
+            color:purple;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        /*form > fieldset > input[type="text"] 속성(특성) 선택자
+        input 요소가 가지고 있는 속성들 중에 type의 값이 text인 선택자*/
+        form > fieldset > input[type=text]:hover {
+            background-color: orange;
+        }
+
+        form > fieldset > button:hover {
+            background-color: maroon;  
+        }
+            /* :checked 라디오 버튼이나 체크 박스에 체크가 되면 이벤트 발생 */
+        form>fieldset>input[name=box] + label{
+            /* 인접 형제 선택자 : 기준 요소의 바롣 뒤에 오는 형제 관게 선택자 하나 */
+            background-color: #ede4e0;
+            color:#000
+        }
+    
+    </style>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend id="form1">form event</legend>
+            <input type = "text" placeholder="힌트"> <button type="submit">전송</button>
+        </fieldset>
+        <fieldset id="field2">
+            <legend id="form2">:checked</legend>
+            <input type="checkbox" name="choice" id="box" value="체크1" ><label for="box">체크1</label>
+            <label>체크2</label>
+        </fieldset> 
+
+    </form>
+</body>
+</html>

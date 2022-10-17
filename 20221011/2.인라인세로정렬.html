@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>인라인 세로 정렬 Vertical-align</title>
+    <style>
+
+        body {
+            font-family: 나눔고딕, 맑은 고딕, sans-serif;
+        }
+        p {
+            background-color: violet;
+            color:#fff;
+            font-weight:bold;
+            font-size:25px
+        }
+        .six-months {
+            vertical-align: top; /*현재 요소와 자손들 모두 top 기준*/
+        }
+        .one-yeas {
+            vertical-align: baseline;  /*기본값*/
+        }
+
+        .two-years1 {
+            vertical-align: bottom; /*현재 요소와 자손들 모두 bottom 기준 
+            부모기준 baseline 기분으로 글자 높이의 반*/
+        }
+
+        .two-years2 {
+            vertical-align: middle; /* baseline 기준으로 글자 높이의 반*/
+        }
+
+        .two-years3 {
+            vertical-align: bottom;
+        }
+    </style>
+</head>
+<body>
+    <h1>인라인 세로 정렬  Vertical-align </h1>
+    <ul>
+        <li>서체 및 인라인 요소 세로 정렬 기준</li>
+        <li>글씨와 이미지 및 input의 정렬 상태가 맞지 않는다면,
+            이미지 요소 및 input에 Vertical-align 적용 </li>
+        <li>인라인 요소</li>
+    </ul>
+    
+    <p><img src="./images/six-months.gif" alt="6개월 강아지"
+    class="six-months"> six-months: top</p>
+    <p><img src="./images/one-year.gif" alt="1살 강아지"
+    class="one-yeas">one-year:baseline</p>
+    <p><img src="./images/two-years.gif" alt="2살 강아지"
+    class="two-years1">two-years:bottom</p>
+    <p><img src="./images/two-years.gif" alt="2살 강아지"
+    class="two-years2">two-years:middle</p>
+    <p><img src="./images/two-years.gif" alt="2살 강아지"
+    class="two-years3"></p>
+</body>
+</html>

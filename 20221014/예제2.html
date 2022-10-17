@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>예제 선생님이랑 같이</title>
+    <style>
+        body {
+        margin:0;
+        font-family: '나눔고딕', '맑은 고딕', '돋움', sans-serif;
+        font-size: 18px;
+        text-align: center;
+        }
+
+        .container {
+            background-color: #ddd;
+            width: 640px;
+           /* height: 1004px; 높이 값은 자주 사용하지 않음...
+           일반적으로 height 값을 고정으로 주지 않음
+           컨텐츠가 늘어나면 자동으로 높이 값이 조절되어야 레이아웃이 무너지지 않기 때문*/ 
+           margin: 14px auto; /*중앙정렬의 기본 중의 기본~!*/
+        }
+
+        .container h1 {
+            margin:0;
+         /* heihgr:445px */
+        }
+
+        .container h1 img {
+         /* 이미지도 글자이기 때문에 꼬릿값 때문에 밑에 거의 여백이 보임...
+           그런 와중에 여백을 없애버려면 버티컬 얼라인 값을 줘야 함! */
+           vertical-align: top;
+            /*베이스라인만 문제라서 탑, 바텀, 미들 모두 ㅇㅋ*/
+        }
+
+        .container h2 {
+            background-color: #000;
+            color: #fff;
+            text-align: left;
+           /* margin: -8px 0px; 이렇게 주면 딱 붙음... 마이너스 값!*/
+           margin: 0;
+           font-size: 20px;
+           padding: 8px;
+           letter-spacing: 2px;
+        }
+
+        .container .box {
+            border: 1px solid #000;
+            border-top:none; /*요지랄나는 이유는 h3 때문임... h3의 기본에 들어간 마진 값 때문임...*/
+
+            /* background-color: orange;
+             overflow: hidden; 마진 상쇄현상을 해결하기 위해 부모 요소에 적용*/
+
+             padding: 20px;
+        }
+        .container .box h3 {
+            margin: 0;
+
+            color:#800000
+        }
+        /* 마진 상쇄 현상으로 부모와 자식의 margin-top 값 중 큰 값이 적용되어 여백이 생김 */
+
+        .container .box strong {
+            color:red;
+            font-size:25px;
+        }
+
+        .container .box address{
+            color:orange;
+            font-style: normal;
+            font-weight: bold;
+            margin-top: 14px;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1><img src="./images/top.jpg" alt="가정용 꿀사과"></h1>
+        <h2>확인하세요</h2>
+        <section class="box">
+            <h3>주문 및 배송</h3>
+            <p><strong>오후 2시 이전 주문 건은</strong> 당일 발송합니다</p>
+            <p>2시 이후 주문건은 다음날 발송합니다.(주말제외)</p>
+        </section>
+        <section class="box">
+            <h3>교환 및 환불</h3>
+            <p>불만족시 100% 환불해 드립니다</p>
+            <p>고객센터로 전화주세요</p>
+        </section>
+        <section class="box">
+            <h3>고객센터</h3>
+            <address>031-2135-5210</address>
+            <p>상담시간: 오전 9시~오후6시 (토/일, 공휴일 휴무)</p>
+        </section>
+    </div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+@charset "utf-8";
+
+#p1 {
+    font-style: '돋움', sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    color:blue;
+}
+
+#p2 {
+    font-family: '굴림', serif;
+    font-style: italic;
+    font-size: 16px;
+    color:blueviolet;
+}
+
+#p3 {
+    font-style: '돋움', sans-serif;
+    text-decoration: underline;
+    font-size: 12px;
+}
+
+#p4 {
+    text-indent: 10px;
+    font-style: '돋움', sans-serif;
+    font-size: 15px;
+}
+
+#p5 {
+    line-height: 50px;
+    font-weight: bold;
+    font-family: '돋움', sans-serif;
+    font-size: 16px;
+    color:green;
+
+}
+
+#p6 {
+    text-align: right;
+    text-decoration: underline;
+    font-weight: bold;
+    font-size:20px;
+    background-color: yellowgreen;
+}

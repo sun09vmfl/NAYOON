@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>기준 요소 바깥 여백 margin</title>
+    <style>
+        h1 {
+            background-color: violet;
+            color:azure;
+            padding:10px;
+            margin: 0;
+            font-size: 28px;
+        }
+        body {
+            margin: 0;
+        }
+
+        .box {
+            background-color: tomato;
+            width: 400px;
+            font-weight: bold;
+        }
+        /*
+        .box1 { 클래스 선택자}
+        div.box1 {종속 선택자} 디브들 중에서 박스1을 찾아라 
+        .box.box1 {종속 선택자} 박스들 중에서 박스1을 찾아라*/ 
+
+        .box.box1 {
+            margin-top: 10px;
+            margin-bottom: 20px;
+            margin-left: 20px;
+            margin-right: 30px;
+            /* margin, padding은 비워진 공간이 아니라 여백으로 '채워진' 공간이라는 개념*/
+        }
+
+        .box.box2 {
+            margin: 10px 20px 30px 20px /* top right bottom left */
+        }
+
+        .box.box3 {
+            margin: 20px 50px; /* top+bottom, right+left */
+        }
+
+        .box.box4 {
+            margin: 10px 20px 30px; /* top, right+left bottom */
+        }
+        
+        .box.box5 {
+            margin:50px;
+        }
+        /* 마진 상쇄 현상
+        일반적인 흐름에서, 
+        1. 형제 관계 요소의 margin-bottom과 margin-top이 만나면
+        둘 중 큰 값이 적용
+        2. 부모 자식 관게 요소에서 margin-top의 값이 같이 들어간 경우
+        둘 중 큰 값이 적용 */
+
+        .box.box7 {
+            margin:0;
+        }   /*p태그는 기본적으로 마진 값을 가지고 있고 0을 주면 없어짐 ㅇㅇ*/
+
+    </style>
+</head>
+<body>
+    <h1>기준 요소 바깥 여백 margin</h1>
+    <!--div의 에멧은 .box$*7{할말} 그리고 없어지면 똑같이 컨트롤 스페이스-->
+    <div class="box box1">마진 (margin)이란 기준 요소의 바깥 여백을 말한다.</div>
+    <div class="box box2">마진 (margin)이란 기준 요소의 바깥 여백을 말한다.</div>
+    <div class="box box3">마진 (margin)이란 기준 요소의 바깥 여백을 말한다.</div>
+    <div class="box box4">마진 (margin)이란 기준 요소의 바깥 여백을 말한다.</div>
+    <div class="box box5">마진 (margin)이란 기준 요소의 바깥 여백을 말한다.</div>
+    <div class="box box6">6. 마진 상쇄 현상 : 인접 형제 요소 및 부모 요소의 margin-bottom과 margin-top의 마진 값이 만났을 때 둘 중 큰 값이 적용. 단, float, flex, overflow, position 등의 값이 적용된 경우는 발생하지 않음. </div>
+    <p class="box box7">7. p요소</class=>
+</body>
+</html>

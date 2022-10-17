@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>테두리 border</title>
+    <style>
+        h1 {
+            font-size:28px;
+            color:forestgreen;
+            font-family: HS산토끼체, 나눔고딕, 맑은 고딕, 돋움, sans-serif;
+            text-decoration: underline;
+            text-shadow: 0 5px 10px  #000
+        }
+        p, div { /*다중 선택자 : 여러 선택자에 동일한 특성을 부여. 쉼표로 구분, 띄어쓰기는 상관x*/
+            width: 400px;
+        }
+
+        #box1 {
+            /*테두리 굵기*/
+            border-top-width: 4px;
+            border-bottom-width: 1px;
+            border-right-width: 2px;
+            border-left-width: 10px;
+
+
+            /*테두리 스타일*/
+            border-top-style: solid; /*실선. 기본값. 글자가 가지고 있는 색상값을 따라감*/
+            border-bottom-style: dashed; /*자른 선*/
+            border-right-style: dotted; /*점선*/
+            border-left-style: double; /*이중선. 3px 이상에서만 보임*/
+
+            /*테두리 색상*/
+            border-top-color: aqua;
+            border-bottom-color: blue;
+            border-right-color: greenyellow;
+            border-left-color: hotpink;
+        }
+    
+        #box2 {
+            /*테두리의 네 방향의 값이 같을 때*/
+            border-style: groove; /*입체선*/
+            border-width: 10px;
+            border-color: forestgreen;
+        }
+
+        #box3 {
+            /*테두리의 값이 모두 같을 때(축약형)*/
+            border: 8px ridge #219; /*축약형 : 값의 순서에 상관없이 띄어쓰기로 구분*/
+        }
+
+        #box4 {
+            border-top: aquamarine 2px dotted;
+            border-left: #5478 1px solid;
+            border-left: hotpink 4px dotted;
+            border-bottom: darkorange 3px dashed;
+        }
+
+        #box5 {
+            border-bottom: 4px solid salmon;
+            text-shadow: 0 5px 5px seagreen;
+        }
+
+        #box6 /*
+            border-style: solid;
+            border-width: 10px;
+            border-color: yellow;
+            border-bottom: 10px groove yellow; */
+
+            /*override 작성시 우선 순위 중요*/
+            {border: 4px solid orange;
+            border-bottom-style: double;
+        }
+
+        #box7 { /*border와 달리 요소의 실제 크기에 영향을 주지 않음*/
+            outline-style: solid;
+            outline-width: 6px;
+            outline-color: #937dc2;
+        }
+
+        #box8 {
+            outline: 40px solid rgba(124, 200, 40, 0.6);
+            border: 10px solid #333;
+
+        }
+
+        #box9 {
+            border:20px solid palevioletred;
+        }
+    </style>
+</head>
+<body>
+    <h1>테두리 border</h1>
+    <!--p#box$*9 (숫자를 붙여서 아이디 9개를 만들어준다는 뜻) 이거 만들면 자동으로 아이디 박스 만들어짐 신기행
+    없어지면 컨트롤 스페이스 누르면 댐
+    그리고 p#box$*9>lorem <이렇게 하면 로렘입숨으로 만들어짐 
+    p#box$*9{} 중괄호 안에 필요한 거 쓰기-->
+ <p id="box1">박스 모델은 실제 콘텐츠 영역, 박스와 콘텐츠 영역 사이의 여백인 padding, 박스의 테두리 border, 그리고 여러 박스 모델간의 여백인 margin 등의 요소로 구성되어 있다</p>
+ <p id="box2">박스 모델은 실제 콘텐츠 영역, 박스와 콘텐츠 영역 사이의 여백인 padding, 박스의 테두리 border, 그리고 여러 박스 모델간의 여백인 margin 등의 요소로 구성되어 있다</p>
+ <p id="box3">박스 모델은 실제 콘텐츠 영역, 박스와 콘텐츠 영역 사이의 여백인 padding, 박스의 테두리 border, 그리고 여러 박스 모델간의 여백인 margin 등의 요소로 구성되어 있다</p>
+ <p id="box4">박스 모델은 실제 콘텐츠 영역, 박스와 콘텐츠 영역 사이의 여백인 padding, 박스의 테두리 border, 그리고 여러 박스 모델간의 여백인 margin 등의 요소로 구성되어 있다</p>
+ <p id="box5">박스 모델은 실제 콘텐츠 영역, 박스와 콘텐츠 영역 사이의 여백인 padding, 박스의 테두리 border, 그리고 여러 박스 모델간의 여백인 margin 등의 요소로 구성되어 있다</p>
+ <p id="box6">박스 모델은 실제 콘텐츠 영역, 박스와 콘텐츠 영역 사이의 여백인 padding, 박스의 테두리 border, 그리고 여러 박스 모델간의 여백인 margin 등의 요소로 구성되어 있다</p>
+ <p id="box7">박스 모델은 실제 콘텐츠 영역, 박스와 콘텐츠 영역 사이의 여백인 padding, 박스의 테두리 border, 그리고 여러 박스 모델간의 여백인 margin 등의 요소로 구성되어 있다</p>
+ <div id="box8">박스 모델은 실제 콘텐츠 영역, 박스와 콘텐츠 영역 사이의 여백인 padding, 박스의 테두리 border, 그리고 여러 박스 모델간의 여백인 margin 등의 요소로 구성되어 있다</div>
+ <div id="box9">박스 모델은 실제 콘텐츠 영역, 박스와 콘텐츠 영역 사이의 여백인 padding, 박스의 테두리 border, 그리고 여러 박스 모델간의 여백인 margin 등의 요소로 구성되어 있다</div>
+ <!--p랑 다르게 div는 문단을 나누는 것이 아니라 여백이 없음(아주 딱 붙어있음)-->
+</body>
+</html>
